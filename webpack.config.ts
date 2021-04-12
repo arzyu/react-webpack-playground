@@ -3,6 +3,7 @@ import { resolve } from "path";
 import { Configuration } from "webpack";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import EslintWebpackPlugin from "eslint-webpack-plugin";
 
 const devMode = process.env.NODE_ENV !== "production";
 
@@ -91,6 +92,9 @@ const config: Configuration = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "index.ejs"
+    }),
+    new EslintWebpackPlugin({
+      extensions: ["ts", "tsx"]
     })
   ],
   devServer: {
