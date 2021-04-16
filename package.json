@@ -11,7 +11,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@arzyu/eslint-config-react": "^0.1.1",
+    "@arzyu/eslint-config-react": "^0.1.2",
     "@babel/core": "^7.13.14",
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
