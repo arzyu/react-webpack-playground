@@ -5,6 +5,8 @@ import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import EslintWebpackPlugin from "eslint-webpack-plugin";
 
+import { resolveTsAliases } from "resolve-ts-aliases";
+
 const devMode = process.env.NODE_ENV !== "production";
 
 const root = resolve(process.cwd());
@@ -15,7 +17,8 @@ const CSS_MODULES_LOCAL_IDENT_NAME = devMode ? "[local]--[hash:base64:7]" : "[ha
 
 const config: Configuration = {
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".json"]
+    extensions: [".tsx", ".ts", ".js", ".json"],
+    alias: resolveTsAliases(resolve("tsconfig.json"))
   },
   context,
   entry: {
