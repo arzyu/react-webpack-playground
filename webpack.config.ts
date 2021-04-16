@@ -94,7 +94,12 @@ const config: Configuration = {
       template: "index.ejs"
     }),
     new EslintWebpackPlugin({
-      extensions: ["ts", "tsx"]
+      extensions: ["ts", "tsx"],
+      baseConfig: {
+        extends: [
+          "@arzyu/react"
+        ]
+      }
     })
   ],
   devServer: {
