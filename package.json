@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "react webpack playground",
   "scripts": {
-    "dev": "NODE_ENV=development airpack --server",
-    "build": "NODE_ENV=production airpack"
+    "dev": "cross-env NODE_ENV=development airpack --server",
+    "build": "cross-env NODE_ENV=production airpack"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -15,6 +15,7 @@
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
     "airpack": "^1.0.1",
+    "cross-env": "^7.0.3",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.5",
     "webpack-cli": "^4.7.2",
