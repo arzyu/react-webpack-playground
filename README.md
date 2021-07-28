@@ -7,6 +7,7 @@ Tools used in this project:
  * webpack
  * react
  * react-css-modules
+ * react-refresh
  * postcss
  * eslint
 
